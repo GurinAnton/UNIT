@@ -1,0 +1,88 @@
+.cta-section {
+  position: relative;
+  background-image: url("../img/sta/sta-bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #219c67;
+  padding-top: 104px;
+  padding-bottom: 75px;
+  text-align: center;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 130, 78, 0.7);
+  }
+
+  // Планшет
+  @media (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    padding-top: 81px;
+    padding-bottom: 87px;
+  }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  margin: 0;
+  margin-bottom: 34px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+
+  // Планшет
+  @media (min-width: 768px) {
+    margin-bottom: 51px;
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    margin-bottom: 48px;
+  }
+}
+
+.cta-unit {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+}
+
+.button-cta {
+  padding: 29px 43px;
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  color: #2bb279;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2.86px;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  transition: background-color 0.3s ease;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: darken(#50e3a4, 30%);
+    color: #fff;
+  }
+}

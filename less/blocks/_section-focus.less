@@ -1,0 +1,122 @@
+.section-focus {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 30px;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    width: 68px;
+    height: 68px;
+    background-color: #a4eecb;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  // Планшет
+  @media (min-width: 768px) {
+    padding-top: 58px;
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    margin: 0;
+    padding-top: 85px;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 0;
+      content: "";
+      width: 100px;
+      height: 100px;
+      background-color: #a4eecb;
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+  }
+}
+.section-focus-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  // Планшет
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.section-focus-img-wrapper {
+  position: relative;
+  max-width: 470px;
+
+  // Планшет
+  @media (min-width: 768px) {
+    max-width: unset;
+    width: 287px;
+    height: 505px;
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    width: 470px;
+    height: 731px;
+    width: 40%;
+  }
+}
+
+.section-focus-img {
+  position: static;
+  max-width: 100%;
+  transform: translateX(-4%);
+
+  // Планшет
+  @media (min-width: 768px) {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    max-width: unset;
+    transform: translateX(-4%);
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: unset;
+  }
+}
+
+.section-focus-content {
+  max-width: 470px;
+  text-align: center;
+
+  // Планшет
+  @media (min-width: 768px) {
+    text-align: left;
+    max-width: 383px;
+    padding-bottom: 139px;
+    padding-left: 14px;
+  }
+
+  // Десктоп
+  @media (min-width: 1200px) {
+    max-width: 470px;
+    margin-left: auto;
+    padding-left: 0;
+  }
+}
